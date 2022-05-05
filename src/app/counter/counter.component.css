@@ -1,0 +1,29 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+.buttonContainer,
+.inputContainers{
+    display: flex;
+    flex-direction: column;
+}
+.buttonStatus, 
+.buttonSteps,
+.setContainer,
+.setStep{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.buttonStatus>span, 
+.buttonSteps>span,
+.setContainer>span,
+.setStep>span{
+    flex: 1 0 100%;
+}
+.buttonStatus>button, 
+.buttonSteps>button{
+    flex: 0 1 15%;
+    margin: 0 0.25rem 0 0.25rem;
+}
