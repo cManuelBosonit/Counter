@@ -1,19 +1,44 @@
 <div class="mainContainer">
-    <h1>0</h1>
+    <h1>{{count}}</h1>
     
     <div class="buttonContainer">
 
         <div class="buttonStatus">
             <span>Setup</span>
-            <button class="btn btn-primary">start</button>
-            <button class="btn btn-primary">pause</button>
-            <button class="btn btn-primary">reset</button>
+            <button 
+                class="btn btn-primary"
+                (click)="start()"
+                >
+                start
+            </button>
+            <button 
+                class="btn btn-primary"
+                (click)="pause()"
+                >
+                pause
+            </button>
+            <button 
+                class="btn btn-primary"
+                (click)="reset()"
+                >
+                reset
+            </button>
         </div>
 
         <div class="buttonSteps">
             <span>Steps</span>
-            <button class="btn btn-primary">count up</button>
-            <button class="btn btn-primary">count down</button>
+            <button 
+                class="btn btn-primary"
+                (click)="countUp()"
+                >
+                count up
+            </button>
+            <button 
+                class="btn btn-primary"
+                (click)="countDown()"
+                >
+                count down
+            </button>
         </div>
 
     </div>
@@ -21,12 +46,19 @@
 
         <div class="setContainer">
             <span>Set to</span>
-            <input type="number">
+            <input 
+                type="number"
+                (change)="onChangeSet($event)"
+                value=0>
         </div>
 
         <div class="setStep">
             <span>Step</span>
-            <input type="number">
+            <input 
+                type="number" 
+                (change)="onChangeStep($event)"
+                value={{step}}
+                >
         </div>
 
     </div>
